@@ -1,4 +1,6 @@
-.bg-image {
+@charset:"utf-8";
+
+/*.bg-image {
     background-image: url("images/product.original.jpg");
     /*background-image: responsive;*/
       background-repeat: no-repeat;
@@ -27,11 +29,32 @@
 	text-align:center;
 	font-size:300%;
 }
+.damn-form{
+	position:absolute;
+	right:10%;
+	top:0;
+	width:50%;
+	height:100%;
+	z-index:1;
+}
 
 @media (max-width: 767px){
+	.container{
+		z-index:0;
+	}
+	.row{
+		z-index:0;
+	}
 	.camera-icon{
 		font-size:300%;
 }
+.bg-image {
+	/*position:absolute;*/
+   width:100%;
+      margin-top:1%;
+      margin-bottom:1%;
+      z-index:1;
+  }
 }
 
 .pg_head{
@@ -40,9 +63,11 @@
 	width:100%;
 }
 .borrow{
-	position:relative;
-	height:80%;
-	top:10%;
+	position:absolute;
+	height:100%;
+	width:100%;
+	background-color:#000000;
+	z-index:-1;
 }
 .borrow .col-sm-1{
 	display:table;
