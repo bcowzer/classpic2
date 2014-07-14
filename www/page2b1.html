@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- from here https://gist.github.com/dhavaln/2238017 -->
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
-    
+
+       <!--<link rel="stylesheet" href="themes/classis2.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+   <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />--> 
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/extra2.css" rel="stylesheet">
+<link href="select/bootstrap-select.min.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
 rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
@@ -19,12 +23,15 @@ rel='stylesheet' type='text/css'>
         alert ("something");
         var userPhoto = document.getElementById('userPhoto');
  
+
         userPhoto.style.display = 'block';
  
+
         userPhoto.src = imageData;
     }
 
- function capturePhotoWithFile() {
+
+    function capturePhotoWithFile() {
         navigator.camera.getPicture(onPhotoFileSuccess, onFail, {
             quality: 50, 
             destinationType: Camera.DestinationType.FILE_URI,
@@ -39,10 +46,9 @@ rel='stylesheet' type='text/css'>
     }
  
 </script>
-
  <style type="text/css">
 body{
-       background-color: #333; 
+      background-color: #333; 
     background-image: url("images/product.original.jpg");
     background-size:cover;
     /*background-image: responsive;*/
@@ -59,90 +65,98 @@ body{
     </style> 
     
 </head>
-
 <body>
-
-<!--Outer div that houses other items-->
+    
+    <!--<div data-role="header" data-position="fixed">
+    <h1>ClassIS App</h1></div><br>-->
 <div>
-
-<!-- div that houses the image preview-->
-<div class="image-holder">
+<div class="borrow">
  <output id="list"></output>
+	<!--<div class="pg_head">
+    	</div>-->
+    	<!--<img class="bg-image" id="userPhoto" src="images/product.original.jpg"/>-->
     </div>
+	<!--<div class="row">
 
-<!-- div that contains the form for setting the parameters needed to refine the student names and statements-->
-<div class="form-holder" id='params'>
-  <div class="forms">
-		 <form name = "userclass">
-    	<!--<div class="button-row">-->
+	<div class="col-xs-6 col-sm-6 col-push-6">
+	<div class="col-xs-12 col-sm-12">
+		<img class="bg-image" id="userPhoto" src="images/product.original.jpg"/>
+		<img class="bg-image" width = "100%" height = "100%" id="userPhoto" src="" />-->
+	
+<!--</div>-->
+
+    <!--Parameters selected: where teacher chooses class, profile and component/strandid to upload a picture-->
+<!--<div class="col-xs-5 col-sm-5 col-pull-5" id='params'>-->
+<div class="funky" id='params'>
+<!--<div id='params' style='display:'>-->
+
+	<div class="forms">
+    <form name = "userclass">
+    	<br>
 	<select class="form-control" name='class' onChange = "classid = this.value" id='class' placeholder='Class Year'>
-		<option value='0'>Select Class Year</option>
+		<option value='0'> Select Class Year</option>
 		<option value='674'>EYNAA</option>
 		<option value='675'>EYRAA</option>
 	</select>
-	<!--</div>-->
         </form>
+	<br>
+	<br>
     <form name = "userprofile">
-    	<!--<div class="button-row">-->
 	<select class="form-control" name='profile' onChange= "profileid = this.value" id='profile'>
-        <option value='0'>Select Profile</option>
+        <option value='0'> Select Profile</option>
 		<option value='ELG'>Early learning Goals</option>
 		<option value='EYFS2436'>Early Years Foundation Stage 2436</option>
 		<option value='EYFS3648'>Early Years Foundation Stage 3648</option>
 	</select>
-	<!--</div>-->
-        </form>  
-  <form name ="usercomponent">
-    	<!--<div class="button-row">-->
+        </form>
+	<br>
+	<br>
+    <form name ="usercomponent">
 	<select class="form-control" name='component' onChange="componentid = this.value" id='component'>
 		<option value='0'>Select Component</option>
-            <option value='PSED:SCSA'>PSED: Self-confidence and Self-awareness</option>
-            <option value='PSED:MFB'>PSED: Managing Feeling and Behaviour</option>
-            <option value='PSED:MR'>PSED: Making Relationships</option>
-            <option value='PD:MH'>PD: Moving and Handling</option>
-            <option value='PD:HSC'>PD: Health and Self-care</option>
-            <option value='CL:LA'>CL: Listening and Attention</option>
-            <option value='CL:U'>CL: Understanding</option>
-            <option value='CL:S'>CL: Speaking</option>
-            <option value='L:R'>L: Reading</option>
-            <option value='L:W'>L: Writing</option>
-            <option value='M:N'>M: Numbers</option>
-            <option value='M:SSM'>M: Shape, Space, and Measure</option>
-			<option value='UW:PC'>UW: People and Communities</option>
-            <option value='UW:TW'>UW: The World</option>
-            <option value='EAD:EMM'>EAD: Exlporing and using Media and Materials</option>
-            <option value='EAD:BI'>EAD: Being Imaginative</option>
-		
-       
+	<option value='UW:TW'>UW: The World</option>
+		<option value='PD:MH'>PD: Moving and Handling</option>
+		<option value='PSED:SCSA'>PSD: Self-confidence and Self-awareness</option>
+        <option value='PSED:MFB'>PSD: Managing Feeling and Behaviour</option>
+        <option value='PSED:MR'>PSD: Making Relationships</option>
 	</select>
-	<!--<div>-->
-        </form>	
-		<!--<div-class="button-row">-->
-	<button class="btn btn-success btn-block" input type="button" value='Go' onclick="submit();">Load Class Settings</button>
-<!--</div>-->
+        </form>
+	<br>
+	<br>
+	<button class="btn btn-primary" input type="button" value='Go' onclick="submit();">Load Class Settings</button>
 </div>
 </div>
+<!--</div>
+ <!-- use img onclick....src.. to call from icon Capture a Photo With the Device Camera-->
 
+<!--When parameters are selected it's the window will be seen, where the teacher is able to select students, a statement and upload multiples pictures-->
+<!--<div class="col-sm-5 col-pull-5" id='statementsbody' style='display:none;'>-->
 
-<!--When parameters are selected on the form in 'params' div above this window will be seen, where the teacher is able to select students, a statement and upload multiples pictures-->
-<div id='statementsbody' class="form-holder" style='display:none;'>
+<div id='statementsbody' class="funky" style='display:none;'>
 <div class="forms">
-<!-- this div contains button for selecting the picture file to be uploaded-->        
-<div class="button-row"><span class="btn btn-success btn-block">Select Photo<input type="file" name="img" id='photo' multiple/></span></div>
-<!-- this div contains button for opening the modal window containing student names to be selected--> 	
+	<!--<form name ="tester">
+	<!--<select name='students' onChange="sid = this.value" id='students'>
+		<option value='0' selected>  </option>
+		<option value='1813'>Claire Dene</option>
+		
+	</select>-->
+        
+	<!--<div id='students' style='float:left;'></div><br>-->
+	<div class="button-row"><span class="btn btn-primary btn-lg btn-block active">Select Photo<input type="file" name="img" id='photo' multiple/></span></div>
+	
 <div class="button-row"><button class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#stu-sel"><span class="glyphicon glyphicon-tags"></span>Select Students
 </button></div>
 
-<!-- Modal dialog that appears when the 'Students' button is selected-->
+<!-- Modal -->
 <div class="modal fade" id="stu-sel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h3 class="modal-title" id="myModalLabel">Select Students</h4>
+        <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span></button>
+        <h4 class="modal-title" id="myModalLabel">Students</h4>
       </div>
       <div class="modal-body">
-      	<!--This div is dynamically loaded with Student names-->
         <div id="students"></div>
       </div>
       <div class="modal-footer">
@@ -151,19 +165,21 @@ body{
     </div>
   </div>
 </div>
-<!--(end of first modal, back to statementbody form)-->
-<!-- this div contains button for opening the modal window containing statements to be selected--> 
 <div class="button-row"><button class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#state_sel"><span class="glyphicon glyphicon-star"></span>Statements</button></div>
-<!-- Modal dialog that appears when the 'Statements' button is selected-->
+<!--<select name='statements' onChange="skillid = this.value" id='statements' size='1'>
+	</select>
+	<textarea name="comments" id="comments" cols="25" rows="3"></textarea>-->
+	<!--<div id='statements'></div>-->
+	<!-- Modal -->
 <div class="modal fade" id="state_sel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Select Statements</h4>
+        <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span></button>
+        <h4 class="modal-title" id="myModalLabel">Students</h4>
       </div>
       <div class="modal-body">
-      	<!--This div is dynamically loaded with Statements-->
         <div id="statements"></div>
       </div>
       <div class="modal-footer">
@@ -172,20 +188,26 @@ body{
     </div>
   </div>
 </div>
-<!--(end of second modal, back to statementbody form)-->	
-<!--Text box for adding any additional comments-->
-<div class="button-row"><textarea rows="5" id="user-comments" placeholder="Comments">
+	<!--<div id='attachphoto'>
+		Attachment<br><input type="file" name="img" id='photo' multiple><br><br>
+		<input type="button" value='Upload' onclick="return upload();">
+	</div>-->
+	<!--<div id='attachphoto'>-->
+		<div class="button-row"><textarea rows="5" id="user-comments" placeholder="Comments">
 </textarea></div>
-<!--Now, upload to all selections to Classis website-->
-<div class="button-row"><input class="btn btn-success btn-block" type="button" value='Upload' onupload=" " onclick="return upload();">
+        <div class="button-row">
+		<!--Select the photo from your device gallery<br><span class="btn btn-primary btn-lg active">Select Photo<input type="file" name="img" id='photo' multiple/></span>-->
+		<!--Now, upload to Classis website<input type="button" value='Upload' onclick="return upload();">class="btn btn-primary btn-lg active">-->
+		<input class="btn btn-primary btn-lg active" type="button" value='Upload' onclick="return upload();">
+	</div>
+	</div>
+	<!--<img src="" alt="Image preview" id="preview" style="display:none;">
+	<!--</form>-->
+<!--</div>-->
 </div>
+<div class="camera-panel"><button class="camera-icon" onclick="capturePhotoWithFile();"><span class="glyphicon glyphicon-camera"></span></button>
 </div>
-</div>
-<!--end of div class 'form-holder' and its 2 forms-->
-<!--right hand div that contains the camera operation icon--> 
-<div class="right-side"><div class="classpic"><img src="images/classpic_sq.png"></div><div class="camera-panel">
-<button class="camera-icon" onclick="capturePhotoWithFile();"><span class="glyphicon glyphicon-camera"></span></button>
-</div>
+<div class="classpic"><img src="images/classpic_sq.png"></div>
 </div>
 
 
@@ -230,12 +252,6 @@ body{
 						studentdiv.id="student";
 						studentdiv.innerHTML="<div class='checkbox'><label><input type='checkbox' name='students[]' value='"+data.students[i].sid+"'>"+data.students[i].forename+" "+data.students[i].surname+"</label></div>";
 						document.getElementById('students').appendChild(studentdiv);
-
-						/*for(i=0;i<data.students.length;i++){
-						var studentrow=document.createElement('TR');
-						studentrow.id="student";
-						studentrow.innerHTML="<tr class='success'><div class='checkbox'><label><input type='checkbox' name='students[]' value='"+data.students[i].sid+"'>"+data.students[i].forename+" "+data.students[i].surname+"</label></div></tr>";
-						document.getElementById('student-names').appendChild(studentrow);*/
 						
 						}
 					}
@@ -249,6 +265,16 @@ body{
 			}
 		xmlhttp.open("GET",apiURL+"?schoolid="+schoolid+"&username="+user+"&token="+token+"&action=getstudents&classid="+classid,true);
 		xmlhttp.send();
+ /*$.ajaxSetup({
+    dataFilter: function(data, type) {
+        if (type === 'json') {
+            data.replace('for (#);', '');
+            return JSON.parse(data);
+        }
+
+        return data;
+    }
+});      
         
 /*Get statements*/
 		var xmlhttps=new XMLHttpRequest();
@@ -262,8 +288,8 @@ body{
 						var statementdiv=document.createElement('div');
 						statementdiv.id="statement";
 						var str = data.statements[i].statement;
-						var newstatement = str.replace ("^", " ").replace ("#", " ").replace ("~", " ").replace ("*", " ");
-						statementdiv.innerHTML="<div class='radio'><label><input type='radio' name='statement' value='"+data.statements[i].skillid+"'>"+newstatement+"</label></div>";
+						var newstatement = str.replace ("^", " ").replace ("#", " ").replace ("~", " ");
+						statementdiv.innerHTML="<input type='radio' name='statement' value='"+data.statements[i].skillid+"'>"+newstatement;
 						document.getElementById('statements').appendChild(statementdiv);
 						}
 
@@ -281,8 +307,7 @@ body{
 		
           reader.onload = (function(theFile) {
             return function(e) {
-              document.getElementById('list').innerHTML = ['<img src="', e.target.result,'" title="', theFile.name,'" width="100%"/>'].join('');
-              // height="400"
+              document.getElementById('list').innerHTML = ['<img src="', e.target.result,'" title="', theFile.name, '" width="300" height="400"/>'].join('');
             };
           })(f);
     
@@ -320,6 +345,7 @@ body{
 									}
 								}
 								var comments = document.getElementById("user-comments").value;
+
 							//**** Here is thecode im trying for uploading the select menu items****
 							//var checkedCheckboxes=document.getElementById('students').value;
 
@@ -350,6 +376,7 @@ body{
 									console.log(data);
 									if(data.success){
 										alert('File uploaded');
+                                         location = "page2b.html";
 										}
 									}
 								};
