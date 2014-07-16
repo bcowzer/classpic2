@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- from here https://gist.github.com/dhavaln/2238017 -->
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
-    
+<!-- loading the default bootstrap style sheet-->    
 <link href="css/bootstrap.css" rel="stylesheet">
+<!-- an additional style sheet--> 
 <link href="css/extra2.css" rel="stylesheet">
+<!-- loading what is the main body font--> 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
 rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+<!-- prepping for phonegap packaging--> 
 <script src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
 
@@ -76,7 +79,7 @@ body{
 		 <form name = "userclass">
     	<!--<div class="button-row">-->
 	<select class="form-control" name='class' onChange = "classid = this.value" id='class' placeholder='Class Year'>
-		<option value='0'>Select Class Year</option>
+		<option value='0' selected><em>Select Class Year</em></option>
 		<option value='674'>EYNAA</option>
 		<option value='675'>EYRAA</option>
 	</select>
@@ -85,7 +88,7 @@ body{
     <form name = "userprofile">
     	<!--<div class="button-row">-->
 	<select class="form-control" name='profile' onChange= "profileid = this.value" id='profile'>
-        <option value='0'>Select Profile</option>
+        <option value='0' selected><em>Select Class Profile</em></option>
 		<option value='ELG'>Early learning Goals</option>
 		<option value='EYFS2436'>Early Years Foundation Stage 2436</option>
 		<option value='EYFS3648'>Early Years Foundation Stage 3648</option>
@@ -95,7 +98,7 @@ body{
   <form name ="usercomponent">
     	<!--<div class="button-row">-->
 	<select class="form-control" name='component' onChange="componentid = this.value" id='component'>
-		<option value='0'>Select Component</option>
+		<option value='0' selected><em>Select Component</em></option>
             <option value='PSED:SCSA'>PSED: Self-confidence and Self-awareness</option>
             <option value='PSED:MFB'>PSED: Managing Feeling and Behaviour</option>
             <option value='PSED:MR'>PSED: Making Relationships</option>
@@ -112,8 +115,6 @@ body{
             <option value='UW:TW'>UW: The World</option>
             <option value='EAD:EMM'>EAD: Exlporing and using Media and Materials</option>
             <option value='EAD:BI'>EAD: Being Imaginative</option>
-		
-       
 	</select>
 	<!--<div>-->
         </form>	
@@ -228,7 +229,7 @@ body{
 					for(i=0;i<data.students.length;i++){
 						var studentdiv=document.createElement('div');
 						studentdiv.id="student";
-						studentdiv.innerHTML="<div class='checkbox'><label><input type='checkbox' name='students[]' value='"+data.students[i].sid+"'>"+data.students[i].forename+" "+data.students[i].surname+"</label></div>";
+						studentdiv.innerHTML="<div class='checkbox'><label><input type='checkbox' name='students[]' value='"+data.students[i].sid+"'>"+data.students[i].forename+" "+data.students[i].surname+"</label></div><div class='stud_img'><img src='"+data.students[i].profilephoto+"'></div>";
 						document.getElementById('students').appendChild(studentdiv);
 
 						/*for(i=0;i<data.students.length;i++){
@@ -320,6 +321,7 @@ body{
 									}
 								}
 								var comments = document.getElementById("user-comments").value;
+				
 							//**** Here is thecode im trying for uploading the select menu items****
 							//var checkedCheckboxes=document.getElementById('students').value;
 
@@ -350,7 +352,7 @@ body{
 									console.log(data);
 									if(data.success){
 										alert('File uploaded');
-                                         location = "page2b.html";
+										location = "page2b.html";
 										}
 									}
 								};
