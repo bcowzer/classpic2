@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- background-color opacity: 0.5;   (im not sure how this works) --> 
+     
+   <style type="text/css">
+    
+   /* I dont think this is wright, 
+   I wanted a 50% opacity image or colour over image, 
+   we have to change the image background 
+   i set up the jumbotron to 90% over the image */
+
+
+    body{
+       
+      background-color: #333; 
+    background-image: url("images/product.original.jpg");
+    background-size:cover;
+    /*background-image: responsive;*/
+      background-repeat: no-repeat;
+      background-position: center center;
+      /*background-size:100%;*/
+      background-attachment:fixed;
+
+      font-family: 'Open Sans', sans-serif;
+      height:100%;
+      vertical-align:middle;
+
+    }
+    /* D.S:; I put the background image on its own div, seems to work better
+    however I attempted another div inside and over this one with a transparent color but for some reason another div is being refused outright*/  
+   #bg-image {
+    position:relative;
+    height:100%;
+    /*background-image: url("images/product.original.jpg");
+    background-image: responsive;
+    background-size:100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;*/
+
+    
+  }
+  /*.bg-image .container{
+height:100%;
+
+  }*/
+/*.container{
+  height:100%;
+}*/
+  .jumbotron {
+    position: relative;
+    background: rgba(51, 51, 51, 0.8);
+    padding-top: 5%;
+    padding-bottom:5%;
+    padding-left: 10%;
+    padding-right:10%;
+    margin-top:10%;
+    margin-bottom:10%;
+    color: inherit;
+    position: relative;
+    height: 80%;
+  }
+  .jumbotron img{
+
+  }
+  /*this adds the color overlay over background image, ill let the designers pick the color*/
+  .fader{
+   background: rgba(51, 51, 51, 0.8); 
+
+  }
+
+
+</style>
+
+
+     </head>
+  <body>
+  
+      <script language="javascript">
+<!--//
+/*This Script http://www.javascriptkit.com/script/cut76.shtml*/
+function pasuser(form) {
+if (form.id.value=="guest") { 
+if (form.pass.value=="123") {              
+location="page2b.html" 
+} else {
+alert("Invalid Password")
+}
+} else {  alert("Invalid UserID")
+}
+}
+
+
+//-->
+
+
+
+
+</script>
+ <!--<div class="bg-image">-->
+  <!--<div class="fader">-->
+    <div class="container">   
+    <div class= "row">  
+ <div class= "col-xs-2 col-sm-1 col-md-3 col-lg-2 col-xl-3">
+      </div>
+    <div class= "col-xs-8 col-sm-10 col-md-6 col-lg-8 col-xl-6">
+    <div class= "jumbotron">
+       <form class="form-signin" name ="login" role="form">
+
+   <!-- <div class= "col-xs-10 col-md-6"> -->
+   <!-- I dont know if this type of spaceing will work on apps <br> -->
+
+    <br> <!-- spaceing -->
+    <!--    Logo       -->
+    
+    <!--<img src="images/classpic_logo.png" class="img-responsive" alt="Class Pic Logo"> -->
+
+    <img src="images/classpic_white_logo.png" class="img-responsive" alt="Class Pic Logo">
+
+<!-- i took out ths text. <h2 class="form-signin-heading">Please sign in</h2> -->
+
+    <br>       <!-- spaceing -->        
+
+        <a href="page2b.html" class="btn btn-lg btn-success" role="button">Back to Homepage</a> <!-- spaceing -->
+
+         <a href="http://www.learningdata.ie" class="btn btn-lg btn-success" role="button">Learning Data</a>
+
+    </div>
+  </div>
+
+
+<div class= "col-xs-2 col-sm-1 col-md-3 col-lg-2 col-xl-3">
+      </div>
+    </div>
+</div>
+ <!--</div>-->
+ <!--</div>-->
+      
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
