@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+@font-face {
+	font-family:'FontAwesome';
+    src:url('font-awesome-4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');
+}
+
 /*div to left of screen containing preview of chosen image and the
 invisible output box that houses the preview*/
 .image-holder{
@@ -95,6 +100,7 @@ on the second stage of the form*/
 	text-align:left;
 	font-family: 'Open Sans', sans-serif;
 }
+
 /*properties added to the text-field comments box*/  
 #user-comments{
 	position:relative;
@@ -120,8 +126,9 @@ on the second stage of the form*/
 	opacity:0
 }
 /*additional stlye for glyph in white default buttons*/
-.btn-default .glyphicon {
-	padding-right:10px;
+.btn-default .fa {
+	font-family:'FontAwesome';
+	margin-right:2%;
 }
 /*end of forms*/
 
@@ -221,10 +228,11 @@ camera operating button and top-right logo*/
 	position:relative;
 	vertical-align:middle;
 	width:100%;
-	color:#ccc;
 	background:none;
 	border:none;
 	text-align:center;
+	font-family:'FontAwesome';
+	color:#ccc;
 	font-size:4em;
 	height:20%;
 	top:40%;
@@ -241,4 +249,22 @@ camera operating button and top-right logo*/
 
 .classpic img{
 	width:100%;
+}
+
+.about{
+	position:absolute;
+	bottom:0%;
+	right:0;
+	padding-bottom:10%;
+	z-index:1;
+	width:100%;
+	text-align:center;
+}
+.about .fa{
+	font:'FontAwesome';
+	font-size:3.5em;
+	color:#ccc;
+	background:none;
+	border:none;
+
 }

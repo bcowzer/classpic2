@@ -2,7 +2,7 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id = "com.brianCamera.example"
-        versionCode = "27"
+        versionCode = "28"
         version = "1.1.1" >
 
     <!-- versionCode is optional and Android only -->
@@ -17,7 +17,7 @@
         B Cowzer
     </author>
             
-         <icon src= "images/classpic_icon200px.png" />
+         <icon src= "images/ic_launcher.png" />
 <preference name="orientation" value="landscape" />
       
 <feature name="http://api.phonegap.com/1.0/camera"/>
