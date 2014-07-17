@@ -18,14 +18,14 @@ rel='stylesheet' type='text/css'>
 <script src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
 
-  /*  function onPhotoFileSuccess(imageData) {
+   function onPhotoFileSuccess(imageData) {
         alert ("something");
         var userPhoto = document.getElementById('userPhoto');
  
-        userPhoto.style.display = 'block';
+        userPhoto.style.display = 'none';
  
         userPhoto.src = imageData;
-    }*/
+    }
 
  function capturePhotoWithFile() {
         navigator.camera.getPicture(onPhotoFileSuccess, onFail, {
@@ -326,7 +326,6 @@ body{
 									}
 								}
 								var comments = document.getElementById("user-comments").value;
-								alert(comments);
 							//**** Here is thecode im trying for uploading the select menu items****
 							//var checkedCheckboxes=document.getElementById('students').value;
 
