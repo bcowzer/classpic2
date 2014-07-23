@@ -20,15 +20,14 @@ rel='stylesheet' type='text/css'>
 <script src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
 
-  /*need to double check with Brian we dont need this code  
+  /*need to double check with Brian we dont need this code   */
   function onPhotoFileSuccess(imageData) {
-        alert ("something");
         var userPhoto = document.getElementById('userPhoto');
  
-        userPhoto.style.display = 'block';
+        userPhoto.style.display = 'none';
  
         userPhoto.src = imageData;
-    }*/
+    }
 
  function capturePhotoWithFile() {
         navigator.camera.getPicture(onPhotoFileSuccess, onFail, {
