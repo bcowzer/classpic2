@@ -9,16 +9,18 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-      /*ds added*/
+      /*ds added
       height:100%;
-      vertical-align:middle;
+      vertical-align:middle;*/
+
 }
 body {
   margin: 0;
-   /*ds added*/
-      height:100%; 
+   /*ds added
+
+ height:100%; 
       vertical-align:middle;
-      background-color:#000000;
+      background-color:#000000;*/
 }
 article,
 aside,
@@ -156,9 +158,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
-  /*ds added width and height to checkboxes*/
-  width: 20px;
-  height:20px;
+ 
 
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -753,15 +753,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 420px) {
-  .container {
-    /*ds removing width: 750px; and replace with below*/
-    width:100%;
-    background-color:#000;
-    height:100%;
-    vertical-align:middle;
-  }
-}
+
 @media (min-width: 768px) {
   .container {
     /*ds removing width: 750px; and replace with below*/
@@ -5200,11 +5192,8 @@ button.close {
 }
 .modal-dialog {
   position: relative;
-  height:80%;
   width: auto;
   margin: 10px;
-  /*ds recent addition*/
-  -webkit-overflow-scrolling: touch;
 }
 .modal-content {
   position: relative;
