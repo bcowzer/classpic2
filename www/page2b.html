@@ -67,12 +67,12 @@ body{
 
 <!--Outer div that houses other items-->
 <div>
-<div id="upload-backdrop">
+<!--<div id="upload-backdrop">
 <div id="uploaded" class="alert alert-success alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" onclick="returnHome()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
   Upload Successful!
 </div>
-</div>
+</div> -->
 
 
 <!-- div that houses the image preview-->
@@ -364,9 +364,10 @@ body{
 									var data=JSON.parse(xmlhttpf.responseText);
 									console.log(data);
 									if(data.success){
-										document.getElementById('upload-backdrop').style.display='block';
-										 document.getElementById('uploaded').style.display='block';
-										//location = "page2b.html";
+                                        alert("upload success");
+										//document.getElementById('upload-backdrop').style.display='block';
+										// document.getElementById('uploaded').style.display='block';
+										location = "page2b.html";
 										}
 									}
 								};
