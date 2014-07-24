@@ -14,18 +14,14 @@ invisible output box that houses the preview*/
 	top:0;
 	left:0;
 	text-align:center;
-	padding-top:0%;
-}
-#list{
-	padding-top:0%;
+	padding-top:5%;
 }
 /*this applies properties to the image that will appear as a left
 screen preview*/
 .image-holder img{
 	position:relative;
-	width:100%;
-	height:auto;
-	top:0;
+	width:80%;
+	box-shadow:0px 0px 15px 1.5em #dff0d8;
 }
 /*FORMS*/
 /*div that contains both the first stage form('params') and 
@@ -37,35 +33,6 @@ second stage form('statementbody')*/
 	float:right;
 	right:10%;
 	text-align:center;
-}
-#upload-backdrop{
-	position:absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	background-color:rgba(64,64,64,0.8);
-	display:none;
-	z-index:1;
-}
-#uploaded{
-	position:absolute;
-	display:none;
-	z-index:2;
-	width:50%;
-	margin-left:25%;
-	margin-right:25%;
-	padding-top:3%;
-	padding-bottom:3%;
-	font-size:2em;
-	font-weight:bold;
-	top:20%;
-	text-align: center;
-	border-radius:0.5em;
-}
-#uploaded .close{
-	font-size:2em;
-	color:green;
 }
 /*general properties shared by individual forms used in both stages*/
 .forms{
@@ -300,66 +267,4 @@ camera operating button and top-right logo*/
 	background:none;
 	border:none;
 
-}
-/*a housing div for details of two businesses*/
-.contact-details{
-	position:relative;
-	width:100%;
-	height:auto;
-	overflow:auto;
-}
-.contact-details p{
-	font-size:1.5em;
-	color:#fff;
-	font-style:italic;
-}
-/*div holding individual company details, there will be two
-of these side by side*/
-.company{
-	position:relative;
-	display:inline-block;
-	width:50%;
-	float:left;
-}
-/*a main housing div for the buttons*/
-.about-buttons{
-	position:relative;
-	width:100%;
-	text-align:center;
-}
-/*styling for individual buttons*/
-.about-buttons .btn{
-	margin-left:5%;
-	margin-right:5%;
-	padding:2%;
-	font-size:3em;
-}
-
-/*media queries controlling text sizes on tablet devices, the market device for our
-app*/
-@media (min-width:768px){
-body{
-	font-size:110%;
-}
-}
-
-@media (min-width:992px){
-body{
-	
-	font-size:120%;
-}
-}
-
-@media (min-width:1200px){
-body{
-	
-	font-size:150%;
-}
-}
-
-@media (min-width:1200px){
-body{
-	
-	font-size:150%;
-}
 }
