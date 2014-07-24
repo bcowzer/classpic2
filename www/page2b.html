@@ -18,8 +18,7 @@ rel='stylesheet' type='text/css'>
 <script src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
 
-  function onPhotoFileSuccess(imageData) {
-    
+   function onPhotoFileSuccess(imageData) {
         var userPhoto = document.getElementById('userPhoto');
  
         userPhoto.style.display = 'none';
@@ -66,17 +65,10 @@ body{
 <body>
 
 <!--Outer div that houses other items-->
-<!--<div>
-<div id="upload-backdrop">
-<div id="uploaded" class="alert alert-success alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" onclick="returnHome()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-  Upload Successful!
-</div>
-</div> -->
-
+<div>
 
 <!-- div that houses the image preview-->
-<div class="image-holder" id='grey'>
+<div class="image-holder">
  <output id="list"></output>
     </div>
 
@@ -85,8 +77,8 @@ body{
   <div class="forms">
 		 <form name = "userclass">
     	<!--<div class="button-row">-->
-	<select class="form-control" name='class' onChange = "classid = this.value" id='class'>
-		<option value='0' selected disabled>Select Class Year</option>
+	<select class="form-control" name='class' onChange = "classid = this.value" id='class' placeholder='Class Year'>
+		<option value='0' selected><em>Select Class Year</em></option>
 		<option value='674'>Early Years group Nursery A</option>
 		<option value='675'>Early Years group Reception A</option>
 	</select>
@@ -95,7 +87,7 @@ body{
     <form name = "userprofile">
     	<!--<div class="button-row">-->
 	<select class="form-control" name='profile' onChange= "profileid = this.value" id='profile'>
-        <option value='0' selected disabled>Select Class Profile</option>
+        <option value='0' selected><em>Select Class Profile</em></option>
 		<option value='ELG'>Early learning Goals</option>
 		<option value='EYFS2436'>Early Years Foundation Stage 2436</option>
 		<option value='EYFS3648'>Early Years Foundation Stage 3648</option>
@@ -105,7 +97,7 @@ body{
   <form name ="usercomponent">
     	<!--<div class="button-row">-->
 	<select class="form-control" name='component' onChange="componentid = this.value" id='component'>
-		<option value='0' selected disabled>Select Component</option>
+		<option value='0' selected><em>Select Component</em></option>
             <option value='PSED:SCSA'>PSED: Self-confidence and Self-awareness</option>
             <option value='PSED:MFB'>PSED: Managing Feeling and Behaviour</option>
             <option value='PSED:MR'>PSED: Making Relationships</option>
@@ -296,7 +288,6 @@ body{
             return function(e) {
               document.getElementById('list').innerHTML = ['<img src="', e.target.result,'" title="', theFile.name,'" width="100%"/>'].join('');
               // height="400"
-              document.getElementById('grey').style.backgroundColor = "rgba(64,64,64,0.8)";
             };
           })(f);
     
@@ -334,7 +325,6 @@ body{
 									}
 								}
 								var comments = document.getElementById("user-comments").value;
-
 							//**** Here is thecode im trying for uploading the select menu items****
 							//var checkedCheckboxes=document.getElementById('students').value;
 
@@ -364,9 +354,7 @@ body{
 									var data=JSON.parse(xmlhttpf.responseText);
 									console.log(data);
 									if(data.success){
-                                        alert("upload success");
-										//document.getElementById('upload-backdrop').style.display='block';
-										// document.getElementById('uploaded').style.display='block';
+										alert('File uploaded');
 										location = "page2b.html";
 										}
 									}
@@ -407,13 +395,10 @@ body{
 			/*No need for storing any parameter*/
 			statementsbody();
 			}
-				/*http://stackoverflow.com/questions/3682805/javascript-load-a-page-on-button-click......This is a function that operates when the sucess alert is closed*/
-		function returnHome(){	
-			window.location.href="page2b.html";
-		}
 </script>
 
- 
+   </div>
+   </div> 
 </div>
     <!--<div>
         <img src ="images/classis.jpg">
