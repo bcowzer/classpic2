@@ -79,8 +79,8 @@ body{
     	<!--<div class="button-row">-->
 	<select class="form-control" name='class' onChange = "classid = this.value" id='class' placeholder='Class Year'>
 		<option value='0' selected><em>Select Class Year</em></option>
-		<option value='674'>EYNAA</option>
-		<option value='675'>EYRAA</option>
+			<option value='674'>Early Years group Nursery A</option>
+		    <option value='675'>Early Years group Reception A</option>
 	</select>
 	<!--</div>-->
         </form>
@@ -267,7 +267,7 @@ body{
 						var statementdiv=document.createElement('div');
 						statementdiv.id="statement";
 						var str = data.statements[i].statement;
-						var newstatement = str.replace ("^", " ").replace ("#", " ");
+						var newstatement = str.replace ("^", " ").replace ("#", " ").replace ("~", " ").replace ("*", " ");
 						statementdiv.innerHTML="<div class='radio'><label><input type='radio' name='statement' value='"+data.statements[i].skillid+"'>"+newstatement+"</label></div>";
 						document.getElementById('statements').appendChild(statementdiv);
 						}

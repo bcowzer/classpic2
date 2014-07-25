@@ -4,11 +4,10 @@
 	font-family:'FontAwesome';
     src:url('font-awesome-4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');
 }
-
- body{
-  height:100%;
+body{
+	height:100%;
     background-image: url("../images/LightMarker5.jpg");
-    vertical-align:middle;
+
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center center;
