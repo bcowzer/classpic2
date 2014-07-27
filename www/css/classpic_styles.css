@@ -37,7 +37,7 @@ body{
 /*styles added to bootstrap jumbotron*/
 #main-house .jumbotron {
     position: relative;
-    height:auto;
+    height:80%;
     background: rgba(51, 51, 51, 0.8);
     padding-top: 2%;
     padding-bottom:5%;
@@ -48,14 +48,9 @@ body{
   }
 
  #main-house .jumbotron input{
-  margin-top:4%;
-  margin-bottom:4%;
   font-size:1.5em;
-  padding:3%;
   }
  #main-house  .jumbotron .btn{
-  margin-top:4%;
-  margin-bottom:4%;
   font-size:1.5em;
   }
 
@@ -66,19 +61,24 @@ body{
 invisible output box that houses the preview*/
 .image-holder{
 	position:absolute;
+	background-color:none;
 	width:50%;
 	height:100%;
 	top:0;
 	left:0;
 	text-align:center;
-	padding-top:5%;
+	padding-top:0%;
+}
+#list{
+	padding-top:0%;
 }
 /*this applies properties to the image that will appear as a left
 screen preview*/
 .image-holder img{
 	position:relative;
-	width:80%;
-	box-shadow:0px 0px 15px 1.5em #dff0d8;
+	width:100%;
+	height:auto;
+	top:0;	
 }
 /*FORMS*/
 /*div that contains both the first stage form('params') and 
