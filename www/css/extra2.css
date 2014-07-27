@@ -9,25 +9,19 @@
 invisible output box that houses the preview*/
 .image-holder{
 	position:absolute;
-	background-color:none;
 	width:50%;
 	height:100%;
 	top:0;
 	left:0;
 	text-align:center;
-	padding-top:0%;
-}
-#list{
-	padding-top:0%;
+	padding-top:5%;
 }
 /*this applies properties to the image that will appear as a left
 screen preview*/
 .image-holder img{
 	position:relative;
-	width:100%;
-	height:auto;
-	top:0;
-	
+	width:80%;
+	box-shadow:0px 0px 15px 1.5em #dff0d8;
 }
 
 
@@ -166,7 +160,7 @@ on the second stage of the form*/
 /*styling added to student profile pic*/
 .stud_img img{
 	position: relative;
-	max-height: 70%;
+	height: 70%;
 	margin-right:50%; 
 	margin-top:15%;
 	margin-bottom:15%;
